@@ -17,6 +17,9 @@
   "exports": {
     "./extensions/subagent/runtime": "./extensions/subagent/runtime.ts"
   },
+  "dependencies": {
+    "@san-tian/pi-project-paths": "git+https://github.com/san-tian/pi-project-paths.git#v0.1.0"
+  },
   "peerDependencies": {
     "@mariozechner/pi-ai": "*",
     "@mariozechner/pi-agent-core": "*",
