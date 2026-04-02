@@ -1,0 +1,29 @@
+{
+  "name": "pi-subagent-tool",
+  "version": "0.1.0",
+  "description": "A reusable Pi package that provides a generic subagent tool based on Pi's official subagent example.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "subagent",
+    "extension",
+    "tool"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/san-tian/pi-subagent-tool.git"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-agent-core": "*",
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*",
+    "@sinclair/typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  }
+}
