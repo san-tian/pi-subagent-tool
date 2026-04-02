@@ -7,6 +7,7 @@ A standalone Pi package that exposes a generic `subagent` tool, based on Pi's of
 - A reusable `subagent` tool for delegating tasks to isolated Pi subprocesses
 - Support for single, parallel, and chained subagent execution
 - JSON-mode event capture from child Pi runs
+- A programmatic runtime helper at `pi-subagent-tool/extensions/subagent/runtime` for packages that want to launch Pi subprocess subagents internally
 - Agent discovery from:
   - `~/.pi/agent/agents/*.md`
   - `.pi/agents/*.md`
