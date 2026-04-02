@@ -24,6 +24,7 @@ export interface RunPiSubagentOptions {
 	hiddenContext?: string;
 	hiddenContextType?: string;
 	extraExtensions?: string[];
+	env?: Record<string, string>;
 }
 
 export interface PiSubagentRunResult {
@@ -163,6 +164,7 @@ export async function runPiSubagent(options: RunPiSubagentOptions): Promise<PiSu
 		hiddenContext,
 		hiddenContextType = "subagent-hidden-context",
 		extraExtensions = [],
+		env = {},
 	} = options;
 
 	const tempExtension = await createTempExtension(systemPrompt, hiddenContext, hiddenContextType);
@@ -203,6 +205,10 @@ export async function runPiSubagent(options: RunPiSubagentOptions): Promise<PiSu
 				cwd,
 				shell: false,
 				stdio: ["pipe", "pipe", "pipe"],
+				env: {
+					...process.env,
+					...env,
+				},
 			});
 
 			let buffer = "";
